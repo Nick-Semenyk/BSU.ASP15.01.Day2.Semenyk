@@ -1,0 +1,9 @@
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\bin\Debug\MathMethods.Tests.dll
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\bin\Debug\MathMethods.Tests.pdb
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\bin\Debug\MathMethods.dll
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\bin\Debug\nunit.framework.dll
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\bin\Debug\MathMethods.pdb
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\bin\Debug\nunit.framework.xml
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\obj\Debug\MathMethods.Tests.csprojResolveAssemblyReference.cache
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\obj\Debug\MathMethods.Tests.dll
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethods.Tests\obj\Debug\MathMethods.Tests.pdb

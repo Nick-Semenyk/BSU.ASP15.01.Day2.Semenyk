@@ -1,0 +1,8 @@
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\bin\Debug\MathMethodsConsole.exe.config
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\bin\Debug\MathMethodsConsole.exe
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\bin\Debug\MathMethodsConsole.pdb
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\bin\Debug\MathMethods.dll
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\bin\Debug\MathMethods.pdb
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\obj\Debug\MathMethodsConsole.csprojResolveAssemblyReference.cache
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\obj\Debug\MathMethodsConsole.exe
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\MathMethodsConsole\obj\Debug\MathMethodsConsole.pdb

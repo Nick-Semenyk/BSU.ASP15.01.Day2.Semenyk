@@ -1,0 +1,8 @@
+E:\7 сем\EPAM\Day1\NewtonsSqrt\NewtonsSqrt\bin\Debug\NewtonsSqrt.dll
+E:\7 сем\EPAM\Day1\NewtonsSqrt\NewtonsSqrt\bin\Debug\NewtonsSqrt.pdb
+E:\7 сем\EPAM\Day1\NewtonsSqrt\NewtonsSqrt\obj\Debug\NewtonsSqrt.csprojResolveAssemblyReference.cache
+E:\7 сем\EPAM\Day1\NewtonsSqrt\NewtonsSqrt\obj\Debug\NewtonsSqrt.dll
+E:\7 сем\EPAM\Day1\NewtonsSqrt\NewtonsSqrt\obj\Debug\NewtonsSqrt.pdb
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\NewtonsSqrt\obj\Debug\NewtonsSqrt.csprojResolveAssemblyReference.cache
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\NewtonsSqrt\obj\Debug\NewtonsSqrt.dll
+E:\REPOS\BSU.ASP15.01.Day2.Semenyk\NewtonsSqrt\NewtonsSqrt\obj\Debug\NewtonsSqrt.pdb

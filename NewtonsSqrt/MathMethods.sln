@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathMethods", "NewtonsSqrt\MathMethods.csproj", "{9578DD98-49CF-4F2F-9BD1-E781A345FFE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathMethods.Tests", "MathMethods.Tests\MathMethods.Tests.csproj", "{CEF099D9-1EA5-4F61-91C9-9051F228E746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathMethodsConsole", "MathMethodsConsole\MathMethodsConsole.csproj", "{2099E1C0-6EBC-4D9D-BCC6-9F27F20C8835}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9578DD98-49CF-4F2F-9BD1-E781A345FFE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9578DD98-49CF-4F2F-9BD1-E781A345FFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9578DD98-49CF-4F2F-9BD1-E781A345FFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9578DD98-49CF-4F2F-9BD1-E781A345FFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF099D9-1EA5-4F61-91C9-9051F228E746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF099D9-1EA5-4F61-91C9-9051F228E746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF099D9-1EA5-4F61-91C9-9051F228E746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF099D9-1EA5-4F61-91C9-9051F228E746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2099E1C0-6EBC-4D9D-BCC6-9F27F20C8835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2099E1C0-6EBC-4D9D-BCC6-9F27F20C8835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2099E1C0-6EBC-4D9D-BCC6-9F27F20C8835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2099E1C0-6EBC-4D9D-BCC6-9F27F20C8835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
