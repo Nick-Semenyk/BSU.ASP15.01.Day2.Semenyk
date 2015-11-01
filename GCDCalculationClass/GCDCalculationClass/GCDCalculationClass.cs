@@ -12,32 +12,7 @@ namespace GCDCalculationClass
     /// </summary>
     public static class GCDCalculationClass
     {
-        private delegate int ArrayParams(params int[] numbers);
-
         private delegate int CalculateGcd(int a, int b);
-        
-//        {
-//        if (numbers == null)
-//            {
-//                throw new ArgumentNullException();
-//    }
-//            if (numbers.Count() == 0)
-//            {
-//                throw new ArgumentNullException();
-//}
-//            if (numbers.Count() == 1)
-//            {
-//                return numbers[0];
-//            }
-//            int temporyGCD = numbers[0];
-//            for (int i = 1; i<numbers.Count(); i++)
-//            {
-//                temporyGCD = BinaryAlgorithm(numbers[i], temporyGCD);
-//                if (temporyGCD == 1)
-//                    return 1;
-//            }
-//            return temporyGCD;
-//        }
 
         /// <summary>
         /// Returns GCD of two integers using Euclidean method
@@ -47,7 +22,7 @@ namespace GCDCalculationClass
         /// <returns></returns>
         public static int EuclideanAlgorithm(int a, int b)
         {
-            int first, second, tempory;
+            int first, second;
             a = Math.Abs(a);
             b = Math.Abs(b);
             if (a > b)
@@ -62,7 +37,7 @@ namespace GCDCalculationClass
             }
             while (second != 0)
             {
-                tempory = second;
+                int tempory = second;
                 second = first % second;
                 first = tempory;
             }
@@ -95,9 +70,7 @@ namespace GCDCalculationClass
         /// <returns></returns>
         public static int EuclideanAlgorithm(int a, int b, int c)
         {
-            int temporyGCD = EuclideanAlgorithm(a, b);
-            temporyGCD = EuclideanAlgorithm(c, temporyGCD);
-            return temporyGCD;
+            return CalculateGcdOfThreeValues(EuclideanAlgorithm, a, b, c);
         }
 
         /// <summary>
@@ -112,11 +85,10 @@ namespace GCDCalculationClass
         {
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            int temporyGCD = EuclideanAlgorithm(a, b);
-            temporyGCD = EuclideanAlgorithm(c, temporyGCD);
+            int result = CalculateGcdOfThreeValues(EuclideanAlgorithm, a, b, c);
             timer.Stop();
             time = timer.ElapsedTicks;
-            return temporyGCD;
+            return result;
         }
 
         /// <summary>
@@ -126,8 +98,7 @@ namespace GCDCalculationClass
         /// <returns></returns>
         public static int EuclideanAlgorithm(params int[] numbers)
         {
-            CalculateGcd euclideanAlgorithm = EuclideanAlgorithm;
-            return CalculateGcdOfValues(euclideanAlgorithm, numbers);
+            return CalculateGcdOfValues(EuclideanAlgorithm, numbers);
         }
 
         /// <summary>
@@ -140,8 +111,7 @@ namespace GCDCalculationClass
         {
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            CalculateGcd euclideanAlgorithm = EuclideanAlgorithm;
-            int result = CalculateGcdOfValues(euclideanAlgorithm, numbers);
+            int result = CalculateGcdOfValues(EuclideanAlgorithm, numbers);
             timer.Stop();
             time = timer.ElapsedTicks;
             return result;
@@ -219,9 +189,7 @@ namespace GCDCalculationClass
         /// <returns></returns>
         public static int BinaryAlgorithm(int a, int b, int c)
         {
-            int temporyGCD = BinaryAlgorithm(a, b);
-            temporyGCD = BinaryAlgorithm(c, temporyGCD);
-            return temporyGCD;
+            return CalculateGcdOfThreeValues(BinaryAlgorithm, a, b, c);
         }
 
         /// <summary>
@@ -236,11 +204,10 @@ namespace GCDCalculationClass
         {
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            int temporyGCD = BinaryAlgorithm(a, b);
-            temporyGCD = BinaryAlgorithm(c, temporyGCD);
+            int result = CalculateGcdOfThreeValues(BinaryAlgorithm, a, b, c);
             timer.Stop();
             time = timer.ElapsedTicks;
-            return temporyGCD;
+            return result;
         }
 
         /// <summary>
@@ -250,8 +217,7 @@ namespace GCDCalculationClass
         /// <returns></returns>
         public static int BinaryAlgorithm(params int[] numbers)
         {
-            CalculateGcd binaryAlgorithm = BinaryAlgorithm;
-            return CalculateGcdOfValues(binaryAlgorithm, numbers);
+            return CalculateGcdOfValues(BinaryAlgorithm, numbers);
         }
 
         /// <summary>
@@ -264,8 +230,7 @@ namespace GCDCalculationClass
         {
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            CalculateGcd binaryAlgorithm = BinaryAlgorithm;
-            int result = CalculateGcdOfValues(binaryAlgorithm, numbers);
+            int result = CalculateGcdOfValues(BinaryAlgorithm, numbers);
             timer.Stop();
             time = timer.ElapsedTicks;
             return result;
@@ -294,5 +259,13 @@ namespace GCDCalculationClass
             }
             return temporyGCD;
         }
+
+        private static int CalculateGcdOfThreeValues(CalculateGcd calculateMethod, int a, int b, int c)
+        {
+            int temporyGCD = calculateMethod(a, b);
+            temporyGCD = calculateMethod(c, temporyGCD);
+            return temporyGCD;
+        }
+
     }
 }
