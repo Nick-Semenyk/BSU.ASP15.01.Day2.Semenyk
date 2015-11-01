@@ -12,6 +12,33 @@ namespace GCDCalculationClass
     /// </summary>
     public static class GCDCalculationClass
     {
+        private delegate int ArrayParams(params int[] numbers);
+
+        private delegate int CalculateGcd(int a, int b);
+        
+//        {
+//        if (numbers == null)
+//            {
+//                throw new ArgumentNullException();
+//    }
+//            if (numbers.Count() == 0)
+//            {
+//                throw new ArgumentNullException();
+//}
+//            if (numbers.Count() == 1)
+//            {
+//                return numbers[0];
+//            }
+//            int temporyGCD = numbers[0];
+//            for (int i = 1; i<numbers.Count(); i++)
+//            {
+//                temporyGCD = BinaryAlgorithm(numbers[i], temporyGCD);
+//                if (temporyGCD == 1)
+//                    return 1;
+//            }
+//            return temporyGCD;
+//        }
+
         /// <summary>
         /// Returns GCD of two integers using Euclidean method
         /// </summary>
@@ -99,26 +126,8 @@ namespace GCDCalculationClass
         /// <returns></returns>
         public static int EuclideanAlgorithm(params int[] numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 0)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 1)
-            {
-                return numbers[0];
-            }
-            int temporyGCD = numbers[0];
-            for (int i = 1; i < numbers.Count(); i++)
-            {
-                temporyGCD = EuclideanAlgorithm(numbers[i], temporyGCD);
-                if (temporyGCD == 1)
-                    return 1;
-            }
-            return temporyGCD;
+            CalculateGcd euclideanAlgorithm = EuclideanAlgorithm;
+            return CalculateGcdOfValues(euclideanAlgorithm, numbers);
         }
 
         /// <summary>
@@ -131,34 +140,11 @@ namespace GCDCalculationClass
         {
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 0)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 1)
-            {
-                timer.Stop();
-                time = timer.ElapsedTicks;
-                return numbers[0];
-            }
-            int temporyGCD = numbers[0];
-            for (int i = 1; i < numbers.Count(); i++)
-            {
-                temporyGCD = EuclideanAlgorithm(numbers[i], temporyGCD);
-                if (temporyGCD == 1)
-                {
-                    timer.Stop();
-                    time = timer.ElapsedTicks;
-                    return 1;
-                }
-            }
+            CalculateGcd euclideanAlgorithm = EuclideanAlgorithm;
+            int result = CalculateGcdOfValues(euclideanAlgorithm, numbers);
             timer.Stop();
             time = timer.ElapsedTicks;
-            return temporyGCD;
+            return result;
         }
 
         /// <summary>
@@ -264,26 +250,8 @@ namespace GCDCalculationClass
         /// <returns></returns>
         public static int BinaryAlgorithm(params int[] numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 0)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 1)
-            {
-                return numbers[0];
-            }
-            int temporyGCD = numbers[0];
-            for (int i = 1; i < numbers.Count(); i++)
-            {
-                temporyGCD = BinaryAlgorithm(numbers[i], temporyGCD);
-                if (temporyGCD == 1)
-                    return 1;
-            }
-            return temporyGCD;
+            CalculateGcd binaryAlgorithm = BinaryAlgorithm;
+            return CalculateGcdOfValues(binaryAlgorithm, numbers);
         }
 
         /// <summary>
@@ -296,33 +264,34 @@ namespace GCDCalculationClass
         {
             Stopwatch timer = new Stopwatch();
             timer.Start();
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 0)
-            {
-                throw new ArgumentNullException();
-            }
-            if (numbers.Count() == 1)
-            {
-                timer.Stop();
-                time = timer.ElapsedTicks;
-                return numbers[0];
-            }
-            int temporyGCD = numbers[0];
-            for (int i = 1; i < numbers.Count(); i++)
-            {
-                temporyGCD = BinaryAlgorithm(numbers[i], temporyGCD);
-                if (temporyGCD == 1)
-                {
-                    timer.Stop();
-                    time = timer.ElapsedTicks;
-                    return 1;
-                }
-            }
+            CalculateGcd binaryAlgorithm = BinaryAlgorithm;
+            int result = CalculateGcdOfValues(binaryAlgorithm, numbers);
             timer.Stop();
             time = timer.ElapsedTicks;
+            return result;
+        }
+
+        private static int CalculateGcdOfValues(CalculateGcd calculateMethod, params int[] values)
+        {
+            if (values == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (values.Count() == 0)
+            {
+                throw new ArgumentNullException();
+            }
+            if (values.Count() == 1)
+            {
+                return values[0];
+            }
+            int temporyGCD = values[0];
+            for (int i = 1; i < values.Count(); i++)
+            {
+                temporyGCD = calculateMethod(values[i], temporyGCD);
+                if (temporyGCD == 1)
+                    return 1;
+            }
             return temporyGCD;
         }
     }
